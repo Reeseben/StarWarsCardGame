@@ -142,8 +142,8 @@ extension CardsCollectionViewController {
             title = incorrectAnswers.randomElement() ?? "Nope."
         }
         
-        
         let alert = UIAlertController(title: title, message: "Play again?", preferredStyle: .alert)
+        
         let shuffle = UIAlertAction(title: "Yes", style: .default) { _ in
             self.shuffleCards()
             self.updateViews()
@@ -154,5 +154,25 @@ extension CardsCollectionViewController {
         alert.addAction(shuffle)
         alert.addAction(no)
         present(alert, animated: true, completion: nil)
+    }
+}
+
+//MARK: - filter view controller delegate methods
+extension CardsCollectionViewController: FilterviewControllerDelegate {
+    func updateFaction(isJedi: Bool) {
+        factionIsJedi = isJedi
+        shuffleCards()
+        updateViews()
+    }
+    
+    
+}
+
+//MARK: - Navigation
+
+extension CardsCollectionViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? FilterViewController
+        destination?.delegate = self
     }
 }

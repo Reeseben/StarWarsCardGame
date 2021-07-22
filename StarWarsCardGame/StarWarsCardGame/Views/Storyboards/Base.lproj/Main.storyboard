@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" id="lAL-A2-e3b">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="line.horizontal.3.decrease" catalog="system" id="w84-D6-lu3">
                             <connections>
-                                <segue destination="lxK-aH-nxh" kind="presentation" id="xk0-uu-9x4"/>
+                                <segue destination="lxK-aH-nxh" kind="presentation" identifier="toFilterVC" id="xk0-uu-9x4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -71,8 +71,48 @@
                     <view key="view" contentMode="scaleToFill" id="A2H-dg-WeL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="y6H-93-LMZ">
+                                <rect key="frame" x="124" y="226.5" width="166" height="355"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-iS-kam">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="165.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ego-iS-kam" secondAttribute="height" multiplier="1:1" id="VtK-3U-AaT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="sith"/>
+                                        <connections>
+                                            <action selector="SithButtonTapped:" destination="lxK-aH-nxh" eventType="touchUpInside" id="Yj7-pP-jzw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBx-Lt-N9O">
+                                        <rect key="frame" x="0.0" y="189.5" width="166" height="165.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PBx-Lt-N9O" secondAttribute="height" multiplier="1:1" id="J7n-41-36m"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="jedi"/>
+                                        <connections>
+                                            <action selector="JediButtonTapped:" destination="lxK-aH-nxh" eventType="touchUpInside" id="ouY-AD-m3F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your path you must decide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07P-7V-lJH">
+                                <rect key="frame" x="34" y="145" width="346" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mRm-Ax-NU7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="07P-7V-lJH" firstAttribute="centerX" secondItem="mRm-Ax-NU7" secondAttribute="centerX" id="1BF-Wa-yyp"/>
+                            <constraint firstItem="y6H-93-LMZ" firstAttribute="centerX" secondItem="mRm-Ax-NU7" secondAttribute="centerX" id="BUv-l5-2ey"/>
+                            <constraint firstItem="y6H-93-LMZ" firstAttribute="width" secondItem="mRm-Ax-NU7" secondAttribute="width" multiplier="0.4" id="a2k-nA-ODe"/>
+                            <constraint firstItem="y6H-93-LMZ" firstAttribute="centerY" secondItem="mRm-Ax-NU7" secondAttribute="centerY" id="bIV-En-sfQ"/>
+                            <constraint firstItem="y6H-93-LMZ" firstAttribute="top" secondItem="07P-7V-lJH" secondAttribute="bottom" constant="48" id="oEF-4Z-AqB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9hv-VS-fG8"/>
                 </viewController>
@@ -100,7 +140,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="jedi" width="600" height="600"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="sith" width="180" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
