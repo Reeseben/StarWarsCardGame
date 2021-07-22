@@ -20,3 +20,10 @@ class Persona {
     }
     
 }
+extension Persona: Equatable{
+    static func == (lhs: Persona, rhs: Persona) -> Bool {
+        return lhs.faction == rhs.faction && lhs.name == rhs.name && lhs.photo == rhs.photo
+    }
+    
+    
+}
