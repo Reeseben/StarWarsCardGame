@@ -14,6 +14,8 @@
 		7EDB74EC25AF34B500B80B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74EA25AF34B500B80B7D /* LaunchScreen.storyboard */; };
 		7EDB74FD25AF359500B80B7D /* PersonaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74FC25AF359500B80B7D /* PersonaController.swift */; };
 		B59F052626A9CBF700954571 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F052526A9CBF700954571 /* Persona.swift */; };
+		B59F052926A9D1C300954571 /* CardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F052826A9D1C300954571 /* CardsCollectionViewController.swift */; };
+		B59F052B26A9D25F00954571 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F052A26A9D25F00954571 /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7EDB74ED25AF34B500B80B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EDB74FC25AF359500B80B7D /* PersonaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaController.swift; sourceTree = "<group>"; };
 		B59F052526A9CBF700954571 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
+		B59F052826A9D1C300954571 /* CardsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewController.swift; sourceTree = "<group>"; };
+		B59F052A26A9D25F00954571 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		7EDB74FB25AF356600B80B7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B59F052726A9D18A00954571 /* ViewControllers */,
 				7EDB74F625AF34D100B80B7D /* Model Controller */,
 			);
 			path = Controllers;
@@ -116,6 +121,15 @@
 				B59F052526A9CBF700954571 /* Persona.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B59F052726A9D18A00954571 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B59F052826A9D1C300954571 /* CardsCollectionViewController.swift */,
+				B59F052A26A9D25F00954571 /* FilterViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59F052B26A9D25F00954571 /* FilterViewController.swift in Sources */,
 				B59F052626A9CBF700954571 /* Persona.swift in Sources */,
 				7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */,
 				7EDB74FD25AF359500B80B7D /* PersonaController.swift in Sources */,
 				7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */,
+				B59F052926A9D1C300954571 /* CardsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
